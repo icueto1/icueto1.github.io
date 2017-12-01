@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|News+Cycle|Work+Sans|Yantramanav');
+
+body{
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+/*body main #reach-me {
+  grid-row: 1 / span 1;
+}*/
+
+a{
+  color: rgb(51,102,0);
+}
+
+a:visited {
+  color: rgb(204,204,0);
+}
+
+a:hover {
+  color: rgb(153,76,0);
+}
+
+a:active{
+  color: pink;
+}
+
+p{
+  line-height: 1.15;
+  /*padding: 0;*/
+}
+
+/*header nav li {
+  display: inline-block;
+}
+
+header nav li::after{
+  content: " ....  "
+  padding: 0 15px;
+}*/
+
+/*header {
+  margin: 0 15px;
+}*/
+
+header p {
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+header p:after {
+  content: "  ";
+  padding: 0 10px;
+}
+
+h1 {
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  /*text-align: center;*/
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2{
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 900;
+  color: rgb(153, 153, 0);
+  font-size: 35px;
+  margin: 5px;
+  /*margin: 0 10px;*/
+}
+
+h3{
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+ul li{
+  list-style: none;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1 fr 580px;
+  /*grid-template-rows: 1;*/
+  grid-column-gap:100px;
+}
+
+#education {
+  grid-column: 1;
+  grid-row: 2 / 1;
+}
+
+#additional-skills {
+  grid-column: 2;
+  grid-row: 2 / span 1;
+}
+
+#experience {
+  grid-column: 2;
+}
+
+/*#more {
+  margin: 0 15px;
+}*/
+
+#wrapper{
+  max-width: 960px;
+  padding-left: 15px;
+  /*margin: 0 auto;*/
+}
+
+#more{
+  /*background-color: rgb(153, 153, 0);*/
+  /*grid-column: 3;
+  grid-row: 3 / span 1;*/
+  text-align: center;
+  font-size: 20px;
+  margin-left: 150px;
+  margin-top: 40px;
+}
