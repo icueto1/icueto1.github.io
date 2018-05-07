@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Submit a tip</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Sintony" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Sintony', sans-serif;
+        font-size: 16px;
+      }
+      label {
+        display: block;
+      }
+      input[type="text"] {
+        display: block;
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Submit a news tip</h1>
+
+    <form>
+      <label>First Name
+      <input type="text" name="firstName" />
+      </label>
+
+      <label>Last Name
+      <input type="text" name="lastName" />
+      </label>
+
+      <input type="submit" name="submit" />
+    </form>
+
+    <p id="greeting"></p>
+
+    <script>
+      var greeting = document.getElementById("greeting");
+      var submit = document.forms[0].elements.submit;
+      // when submit is clicked
+      submit.addEventListener("click", function() {
+        // prevent the page from refreshing
+        event.preventDefault();
+        // collect the data entered in firstName, lastName
+        var firstName = document.forms[0].elements.firstName.value;
+        var lastName = document.forms[0].elements.lastName.value;
+        // display a greeting!
+        greeting.textContent = "Hello, " + firstName + " " + lastName + "!" + " Please fill out the form below. ";
+      });
+    </script>
+
+<form id="test-form">
+
+  <div>
+    <label>Email
+    <input type="email" name="formField1" placeholder="me@me.com"/>
+    </label>
+  </div>
+
+  <div>
+    <label>Phone Number
+    <input type="tel" name="formField2" placeholder="123-456-7890"/>
+    </label>
+  </div>
+
+  <div>
+    <label>Relationship to University
+    <input type="text" name="formField3" placeholder="i.e. staff, student"/>
+    </label>
+  </div>
+
+  <div>
+    <label>News Tip
+    <input type="text" name="formField4" required="required" placeholder="enter tip here"/>
+    </label>
+  </div>
+
+  <div>
+    <label>Source?
+    <input type="text" required="required" name="formField5" placeholder="i.e. firsthand, rumor"/>
+    </label>
+  </div>
+
+  <div>
+    <label> Why Report?
+    <input type="text" name="formField6" placeholder="what brought you to us?"/>
+    </label>
+  </div>
+
+  <div>
+    <label> OK to follow up?
+    <input type="radio">yes
+    <input type="radio">no
+    <input type="text"
+    name="formField7";
+    />
+    </label>
+  </div>
+
+  <div>
+    <button type="submit" id="submit-form">Submit</button>
+  </div>
+
+</form>
+
+  <p id="thankYou"></p>
+
+  <script>
+  var thankYou = document.getElementById("thankYou");
+  var $form = $('form#test-form'),
+      url = 'https://script.google.com/macros/s/AKfycbzAvWWWdeQIhKqUdE7CRcHVQYcuUMwWcXNEmzzGiuwu7h6qokWY/exec'
+
+  $('#submit-form').on('click', function(e) {
+    e.preventDefault();
+    thankYou.textContent = "Thanks! ";
+    // var submit = document.getElementById("submit-form");
+    //   function displayAlert() {
+    //     alert("Thanks!");
+    //   }
+    //   submit.onClick = displayAlert;
+    var jqxhr = $.ajax({
+      url: url,
+      method: "GET",
+      dataType: "json",
+      data: $form.serializeObject()
+    })
+    .success(
+        submit = document.forms[0].elements.submit;
+        // when submit is clicked
+        submit.addEventListener("click", function() {
+          // prevent the page from refreshing
+          event.preventDefault();
+        // collect the data entered
+          var formField1 = document.forms[0].elements.formField1.value;
+          var formField2 = document.forms[0].elements.formField2.value;
+          var formField3 = document.forms[0].elements.formField3.value;
+          var formField4 = document.forms[0].elements.formField4.value;
+          var formField5 = document.forms[0].elements.formField5.value;
+          var formField6 = document.forms[0].elements.formField6.value;
+          var formField7 = document.forms[0].elements.formField7.value;
+      // display a greeting!
+
+    }
+        });
+
+  //   );
+  // })
+  // </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script> type="text/javascript" src="script.js"</script>
+</body>
+</html>
